@@ -17,7 +17,7 @@ export const Counter: FunctionComponent<{ language?: 'EN' | 'FR' }> = ({
 	}
 
 	return (
-		<div className="navbar bg-base-100">
+		<div className="navbar bg-base-100 sticky top-0 z-50">
 			<div className="navbar-start">
 				<div className="dropdown">
 					<label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -38,39 +38,26 @@ export const Counter: FunctionComponent<{ language?: 'EN' | 'FR' }> = ({
 					</label>
 					<ul
 						tabIndex={0}
-						className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+						className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 uppercase"
 					>
 						<li>
-							<a>Item 1</a>
-						</li>
-						<li tabIndex={0}>
-							<a className="justify-between">
-								Parent
-								<svg
-									className="fill-current"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-								>
-									<path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-								</svg>
-							</a>
-							<ul className="p-2">
-								<li>
-									<a>Submenu 1</a>
-								</li>
-								<li>
-									<a>Submenu 2</a>
-								</li>
-							</ul>
+							<a>à propos</a>
 						</li>
 						<li>
-							<a>Item 3</a>
+							<a>nos projets</a>
+						</li>
+						<li>
+							<a>nos activitées</a>
+						</li>
+						<li>
+							<a>location</a>
+						</li>
+						<li>
+							<a>contactez-nous</a>
 						</li>
 					</ul>
 				</div>
-				<a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+				<a className="btn btn-ghost normal-case text-xl">KMC</a>
 			</div>
 			<div className="navbar-center hidden lg:flex">
 				<ul className="menu menu-horizontal p-0">
@@ -87,12 +74,15 @@ export const Counter: FunctionComponent<{ language?: 'EN' | 'FR' }> = ({
 								<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
 							</svg>
 						</a>
-						<ul className="p-2">
+						<ul className="p-2 bg-white">
 							<li>
-								<a>Submenu 1</a>
+								<a>Présentation</a>
 							</li>
 							<li>
-								<a>Submenu 2</a>
+								<a>Mission, vision et valeurs</a>
+							</li>
+							<li>
+								<a>Certificats</a>
 							</li>
 						</ul>
 					</li>
@@ -112,12 +102,18 @@ export const Counter: FunctionComponent<{ language?: 'EN' | 'FR' }> = ({
 								<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
 							</svg>
 						</a>
-						<ul className="p-2">
+						<ul className="p-2 bg-white">
 							<li>
-								<a>Submenu 1</a>
+								<a>Échafaudage</a>
 							</li>
 							<li>
-								<a>Submenu 2</a>
+								<a>Étaiement</a>
+							</li>
+							<li>
+								<a>Coffrage</a>
+							</li>
+							<li>
+								<a>Catalogue</a>
 							</li>
 						</ul>
 					</li>
@@ -140,20 +136,21 @@ export const Counter: FunctionComponent<{ language?: 'EN' | 'FR' }> = ({
 								<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
 							</svg>
 						</a>
-						<ul className="p-2">
+						<ul className="p-2 bg-white">
 							<li>
-								<a>Submenu 1</a>
+								<a>Contact</a>
 							</li>
 							<li>
-								<a>Submenu 2</a>
+								<a>Demander un devis</a>
+							</li>
+							<li>
+								<a>Carriére</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 			<div className="navbar-end">
-				{/* <h1>EN</h1> */}
-				{/* language toggle */}
 				{language === 'EN' ? (
 					<a className="btn btn-ghost normal-case text-xl">FR</a>
 				) : (
