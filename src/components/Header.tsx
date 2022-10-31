@@ -1,11 +1,9 @@
-import { useState } from 'preact/hooks';
 import type { FunctionComponent } from 'preact';
 
-// remove optional prop later
-export const Counter: FunctionComponent<{ language?: 'EN' | 'FR' }> = ({
+// make optional prop later
+export const Header: FunctionComponent<{ language?: 'EN' | 'FR' }> = ({
 	language,
 }) => {
-	const [count, setCount] = useState(0);
 	if (!language) {
 		language = 'FR';
 	}
@@ -17,7 +15,7 @@ export const Counter: FunctionComponent<{ language?: 'EN' | 'FR' }> = ({
 	}
 
 	return (
-		<div className="navbar bg-base-100 sticky top-0 z-50">
+		<div className="navbar bg-base-100 sticky bg-transparent text-white top-0 z-50">
 			<div className="navbar-start">
 				<div className="dropdown">
 					<label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -38,7 +36,7 @@ export const Counter: FunctionComponent<{ language?: 'EN' | 'FR' }> = ({
 					</label>
 					<ul
 						tabIndex={0}
-						className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 uppercase"
+						className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 uppercase text-black"
 					>
 						<li>
 							<a>à propos</a>
@@ -74,7 +72,7 @@ export const Counter: FunctionComponent<{ language?: 'EN' | 'FR' }> = ({
 								<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
 							</svg>
 						</a>
-						<ul className="p-2 bg-white">
+						<ul className="p-2 text-black bg-white">
 							<li>
 								<a>Présentation</a>
 							</li>
@@ -102,7 +100,7 @@ export const Counter: FunctionComponent<{ language?: 'EN' | 'FR' }> = ({
 								<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
 							</svg>
 						</a>
-						<ul className="p-2 bg-white">
+						<ul className="p-2 text-black bg-white">
 							<li>
 								<a>Échafaudage</a>
 							</li>
@@ -136,7 +134,7 @@ export const Counter: FunctionComponent<{ language?: 'EN' | 'FR' }> = ({
 								<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
 							</svg>
 						</a>
-						<ul className="p-2 bg-white">
+						<ul className="p-2 text-black bg-white">
 							<li>
 								<a>Contact</a>
 							</li>
