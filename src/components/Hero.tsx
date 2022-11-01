@@ -39,14 +39,15 @@ export const Hero: FunctionComponent<{}> = () => {
 						a id nisi.
 					</p>
 					<button
-						onClick={(e) => {
-							console.log('click');
-
-							(e.target as HTMLElement).classList.remove(
-								'animate-slideUpThird'
-							);
+						onAnimationEnd={(e) => {
+							const target = e.target as HTMLElement;
+							target.classList.replace('btn-disabled', 'btn-primary');
 						}}
-						className="btn btn-primary animate-slideUpThird"
+						onClick={(e) => {
+							const target = e.target as HTMLElement;
+							target.classList.remove('animate-slideUpThird');
+						}}
+						className="btn btn-disabled animate-slideUpThird"
 					>
 						en savoir plus
 					</button>
