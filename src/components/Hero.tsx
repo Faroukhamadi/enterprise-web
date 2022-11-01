@@ -27,18 +27,27 @@ export const Hero: FunctionComponent<{}> = () => {
 					<div ref={ref}>
 						<h1
 							hidden={!inView}
-							className="mb-5 text-5xl font-bold uppercase animate-slideUp"
+							className="mb-5 text-5xl font-bold uppercase animate-slideUpFirst"
 						>
 							vos constructions en toute sérénité
 						</h1>
 					</div>
 
-					<p className="my-14 animate-slideUp">
+					<p className="my-14 animate-slideUpSecond">
 						Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
 						excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
 						a id nisi.
 					</p>
-					<button className="btn btn-primary animate-slideUp">
+					<button
+						onClick={(e) => {
+							console.log('click');
+
+							(e.target as HTMLElement).classList.remove(
+								'animate-slideUpThird'
+							);
+						}}
+						className="btn btn-primary animate-slideUpThird"
+					>
 						en savoir plus
 					</button>
 				</div>

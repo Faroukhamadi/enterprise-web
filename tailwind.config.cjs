@@ -4,12 +4,22 @@ module.exports = {
 	theme: {
 		extend: {
 			animation: {
-				slideUp: 'slideUp ease .5s forwards',
+				slideUpFirst: 'slideUpFirst ease-in-out 1s forwards',
+				slideUpSecond: 'slideUpSecond ease-in-out 2.5s forwards',
+				slideUpThird: 'slideUpThird ease-in-out 3.5s forwards',
 			},
 			keyframes: {
-				slideUp: {
-					'0%': { transform: 'translateY(0)' },
-					'100%': { transform: 'translateY(-40px)', opacity: '1' },
+				slideUpFirst: {
+					'0%': { transform: 'translateY(200%)', opacity: 0 },
+					'100%': { transform: 'translateY(0)', opacity: 1 },
+				},
+				slideUpSecond: {
+					'0%': { transform: 'translateY(200%)', opacity: 0 },
+					'100%': { transform: 'translateY(0)', opacity: 1 },
+				},
+				slideUpThird: {
+					'0%': { transform: 'translateY(200%)', opacity: 0 },
+					'100%': { transform: 'translateY(0)', opacity: 1 },
 				},
 			},
 		},
